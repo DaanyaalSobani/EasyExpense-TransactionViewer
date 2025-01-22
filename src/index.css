@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  button { 
+    display: none; 
+  }
+  table { 
+    break-inside: auto; 
+  }
+  tr { 
+    break-inside: avoid; 
+  }
+  @page { 
+    size: landscape; 
+  }
+  .daily-summary {
+    break-before: avoid-page;
+    break-after: avoid-page;
+    page-break-before: avoid-page;
+    page-break-after: avoid-page;
+    margin-top: 2em;
+  }
+  
+  .transaction-group {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-before: auto;
+    page-break-before: auto;
+    widows: 3;
+  }
+  .sticky {
+    position: static;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .max-h-[80vh] {
+    max-height: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .sticky-header {
+    position: sticky;
+  }
+  
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
